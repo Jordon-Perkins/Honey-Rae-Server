@@ -9,7 +9,7 @@ router.register(r'customers', CustomerView, 'customer')
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'employees', EmployeeView, 'employee')
 router = routers.DefaultRouter(trailing_slash=False)
-router.register(r'serviceTickets', ServiceTicketView, 'service_tickets')
+router.register(r'tickets', ServiceTicketView, 'service_tickets')
 
 urlpatterns = [
     # Requests to http://localhost:8000/register will be routed to the register_user function
