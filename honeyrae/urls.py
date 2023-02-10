@@ -6,9 +6,7 @@ from rest_framework import routers
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'customers', CustomerView, 'customer')
-router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'employees', EmployeeView, 'employee')
-router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'tickets', ServiceTicketView, 'service_tickets')
 
 urlpatterns = [
