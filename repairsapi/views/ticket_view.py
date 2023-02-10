@@ -82,6 +82,19 @@ class ServiceTicketView(ViewSet):
         
         return Response(None, status=status.HTTP_204_NO_CONTENT)
 
+    def destroy(self, request, pk=None):
+        """Handle DELETE requests for single customer
+
+        Returns:
+            response -- None just 204 status code.
+        """
+        service_ticket = ServiceTicket.objects.get(pk=pk)
+        service_ticket.delete()
+
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
+
+
+
 class TicketEmployeeSerializer(serializers.ModelSerializer):
 
      class Meta:
